@@ -17,7 +17,7 @@
 ## 🏗️ 프로젝트 구조
 
 ```
-WEB1/
+kalpha.kr/
 ├── 📄 index.html           # 메인 랜딩 페이지
 ├── 🔐 sign_in.html         # 로그인 페이지
 ├── 📝 sign_up.html         # 회원가입 페이지
@@ -32,15 +32,16 @@ WEB1/
 │   ├── auth.js            # 인증 관련 기능
 │   ├── dashboard.js       # 대시보드 기능
 │   └── profile.js         # 프로필 관리
-└── 🐍 python/             # 백엔드 Python 스크립트
+└── � README.md           # 프로젝트 문서
 ```
 
 ## 🚀 빠른 시작
 
 ### 1. 프로젝트 클론
+
 ```bash
 git clone https://github.com/gguatit/kalpha.kr.git
-cd kalpha.kr/WEB1
+cd kalpha.kr
 ```
 
 ### 2. 로컬 서버 실행
@@ -53,7 +54,8 @@ npx serve .
 ```
 
 ### 3. 브라우저에서 확인
-```
+
+```text
 http://localhost:8000
 ```
 
@@ -191,7 +193,7 @@ const AuthModule = (function() {
 
 ## 📞 연락처
 
-- **개발자**: gguatit
+- **개발자**: gguatit(kalpha)
 - **이메일**: [이메일 주소]
 - **프로젝트 링크**: [https://github.com/gguatit/kalpha.kr](https://github.com/gguatit/kalpha.kr)
 
