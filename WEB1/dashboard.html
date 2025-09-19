@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대시보드 - Kalpha</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo hover-bounce">
+                <a href="index.html" style="color: inherit; text-decoration: none;">
+                    <i class="fas fa-rocket"></i>
+                    <span>Kalpha</span>
+                </a>
+            </div>
+            <button class="sidebar-toggle hover-glow" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <a href="#dashboard" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span>대시보드</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#analytics" class="nav-link">
+                        <i class="fas fa-chart-line"></i>
+                        <span>분석</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link hover-lift">
+                        <i class="fas fa-project-diagram"></i>
+                        <span>프로젝트</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#tasks" class="nav-link hover-lift">
+                        <i class="fas fa-tasks"></i>
+                        <span>작업</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link hover-lift">
+                        <i class="fas fa-users"></i>
+                        <span>팀</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#calendar" class="nav-link hover-lift">
+                        <i class="fas fa-calendar"></i>
+                        <span>일정</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#messages" class="nav-link hover-lift">
+                        <i class="fas fa-envelope"></i>
+                        <span>메시지</span>
+                        <span class="badge animate-pulse">5</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link hover-lift">
+                        <i class="fas fa-user"></i>
+                        <span>프로필</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#settings" class="nav-link hover-lift">
+                        <i class="fas fa-cog"></i>
+                        <span>설정</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <div class="user-card">
+                <div class="user-avatar">
+                    <img src="https://via.placeholder.com/40x40/6366f1/ffffff?text=U" alt="User Avatar">
+                </div>
+                <div class="user-info">
+                    <div class="user-name">홍길동</div>
+                    <div class="user-role">개발자</div>
+                </div>
+                <div class="user-menu">
+                    <button class="user-menu-btn" onclick="toggleUserMenu()">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div class="user-menu-dropdown" id="userMenuDropdown">
+                        <a href="profile.html"><i class="fas fa-user"></i> 프로필</a>
+                        <a href="#"><i class="fas fa-cog"></i> 설정</a>
+                        <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> 로그아웃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1 class="page-title">대시보드</h1>
+                <p class="page-subtitle">오늘도 좋은 하루 되세요!</p>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="검색...">
+                </div>
+                <div class="header-actions">
+                    <button class="action-btn notification-btn">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <button class="action-btn" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Dashboard Content -->
+        <div class="dashboard-content">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">24</div>
+                        <div class="stat-label">활성 프로젝트</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            12% 증가
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">156</div>
+                        <div class="stat-label">완료된 작업</div>
+                        <div class="stat-change positive">
+                            <i class="fas fa-arrow-up"></i>
+                            8% 증가
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">팀 멤버</div>
+                        <div class="stat-change neutral">
+                            <i class="fas fa-minus"></i>
+                            변화 없음
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-number">320</div>
+                        <div class="stat-label">작업 시간</div>
+                        <div class="stat-change negative">
+                            <i class="fas fa-arrow-down"></i>
+                            5% 감소
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>프로젝트 진행률</h3>
+                        <div class="chart-actions">
+                            <select class="chart-filter">
+                                <option>이번 주</option>
+                                <option>이번 달</option>
+                                <option>분기별</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-content">
+                        <canvas id="progressChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>작업 분포</h3>
+                    </div>
+                    <div class="chart-content">
+                        <canvas id="distributionChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <div class="section-header">
+                    <h3>최근 활동</h3>
+                    <a href="#" class="view-all">모두 보기</a>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">새 프로젝트 생성</div>
+                            <div class="activity-description">"AI 챗봇 개발" 프로젝트가 생성되었습니다.</div>
+                            <div class="activity-time">2시간 전</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">작업 완료</div>
+                            <div class="activity-description">UI 디자인 작업이 완료되었습니다.</div>
+                            <div class="activity-time">4시간 전</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-user-plus"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">팀 멤버 추가</div>
+                            <div class="activity-description">김개발님이 팀에 합류했습니다.</div>
+                            <div class="activity-time">1일 전</div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-title">프로젝트 수정</div>
+                            <div class="activity-description">"웹사이트 리뉴얼" 프로젝트 정보가 업데이트되었습니다.</div>
+                            <div class="activity-time">2일 전</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <div class="section-header">
+                    <h3>빠른 작업</h3>
+                </div>
+                <div class="action-grid">
+                    <button class="action-card" onclick="showModal('newProjectModal')">
+                        <i class="fas fa-plus"></i>
+                        <span>새 프로젝트</span>
+                    </button>
+                    <button class="action-card" onclick="showModal('newTaskModal')">
+                        <i class="fas fa-tasks"></i>
+                        <span>작업 추가</span>
+                    </button>
+                    <button class="action-card" onclick="showModal('inviteMemberModal')">
+                        <i class="fas fa-user-plus"></i>
+                        <span>멤버 초대</span>
+                    </button>
+                    <button class="action-card">
+                        <i class="fas fa-calendar-plus"></i>
+                        <span>일정 추가</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Modals -->
+    <div id="newProjectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>새 프로젝트 생성</h3>
+                <button class="close-btn" onclick="closeModal('newProjectModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="newProjectForm">
+                    <div class="form-group">
+                        <label>프로젝트 이름</label>
+                        <input type="text" placeholder="프로젝트 이름을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label>설명</label>
+                        <textarea placeholder="프로젝트 설명을 입력하세요" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>마감일</label>
+                        <input type="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label>우선순위</label>
+                        <select required>
+                            <option value="low">낮음</option>
+                            <option value="medium" selected>보통</option>
+                            <option value="high">높음</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal('newProjectModal')">취소</button>
+                <button class="btn-primary" onclick="createProject()">생성</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="newTaskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>새 작업 추가</h3>
+                <button class="close-btn" onclick="closeModal('newTaskModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="newTaskForm">
+                    <div class="form-group">
+                        <label>작업 이름</label>
+                        <input type="text" placeholder="작업 이름을 입력하세요" required>
+                    </div>
+                    <div class="form-group">
+                        <label>프로젝트</label>
+                        <select required>
+                            <option>프로젝트를 선택하세요</option>
+                            <option>AI 챗봇 개발</option>
+                            <option>웹사이트 리뉴얼</option>
+                            <option>모바일 앱 개발</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>담당자</label>
+                        <select required>
+                            <option>담당자를 선택하세요</option>
+                            <option>홍길동</option>
+                            <option>김개발</option>
+                            <option>이디자인</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>마감일</label>
+                        <input type="date" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeModal('newTaskModal')">취소</button>
+                <button class="btn-primary" onclick="createTask()">추가</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

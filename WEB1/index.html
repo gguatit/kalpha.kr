@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalpha - 미래를 향한 혁신</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-rocket"></i>
+                <span>Kalpha</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">홈</a>
+                <a href="#features" class="nav-link">기능</a>
+                <a href="#about" class="nav-link">소개</a>
+                <a href="#contact" class="nav-link">연락처</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="sign_in.html" class="btn-secondary nav-btn hover-lift">로그인</a>
+                <a href="sign_up.html" class="btn-primary nav-btn hover-lift animate-glow">회원가입</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    미래를 향한 <span class="highlight">혁신</span>이 시작됩니다
+                </h1>
+                <p class="hero-description">
+                    Kalpha와 함께 새로운 디지털 경험을 만나보세요. 
+                    최첨단 기술과 사용자 중심의 디자인이 만나는 플랫폼입니다.
+                </p>
+                <div class="hero-buttons">
+                    <a href="sign_up.html" class="btn-primary btn-large hover-lift animate-glow">
+                        <i class="fas fa-rocket"></i>
+                        지금 시작하기
+                    </a>
+                    <button class="btn-secondary btn-large hover-lift" onclick="playDemo()">
+                        <i class="fas fa-play"></i>
+                        데모 보기
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10000">0</span>
+                        <span class="stat-label">활성 사용자</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">국가</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99">0</span>
+                        <span class="stat-label">만족도</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>실시간 분석</h4>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-shield"></i>
+                    <h4>보안 강화</h4>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-users"></i>
+                    <h4>팀 협업</h4>
+                </div>
+                <div class="hero-graphic">
+                    <div class="graphic-circle"></div>
+                    <div class="graphic-dots"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>주요 기능</h2>
+                <p>Kalpha의 강력한 기능들을 만나보세요</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card hover-lift">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>빠른 성능</h3>
+                    <p>최적화된 알고리즘으로 빠르고 효율적인 작업이 가능합니다.</p>
+                    <a href="#" class="feature-link hover-glow">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card hover-lift">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>직관적 디자인</h3>
+                    <p>사용자 친화적인 인터페이스로 누구나 쉽게 사용할 수 있습니다.</p>
+                    <a href="#" class="feature-link hover-glow">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card hover-lift">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>클라우드 연동</h3>
+                    <p>언제 어디서나 접근 가능한 클라우드 기반 서비스입니다.</p>
+                    <a href="#" class="feature-link hover-glow">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card hover-lift">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                    <h3>모바일 최적화</h3>
+                    <p>모든 디바이스에서 완벽하게 작동하는 반응형 디자인입니다.</p>
+                    <a href="#" class="feature-link hover-glow">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card hover-lift">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>강력한 보안</h3>
+                    <p>최신 암호화 기술로 데이터를 안전하게 보호합니다.</p>
+                    <a href="#" class="feature-link hover-glow">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card hover-lift">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 지원</h3>
+                    <p>언제든지 도움을 받을 수 있는 전문 고객 지원팀이 있습니다.</p>
+                    <a href="#" class="feature-link hover-glow">자세히 보기 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Kalpha 소개</h2>
+                    <p>
+                        우리는 기술의 힘으로 세상을 더 나은 곳으로 만들고자 합니다. 
+                        Kalpha는 혁신적인 솔루션과 사용자 중심의 접근 방식을 통해 
+                        디지털 경험의 새로운 표준을 제시합니다.
+                    </p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>혁신적인 기술</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>사용자 중심 설계</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>지속적인 개선</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>글로벌 서비스</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-primary hover-lift animate-glow">더 알아보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>연락처</h2>
+                <p>궁금한 점이 있으시면 언제든지 문의해주세요</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>주소</h4>
+                            <p>서울특별시 강남구 테헤란로 123</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>전화</h4>
+                            <p>+82 010-5124-3413</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>이메일</h4>
+                            <p>kalpha0.2.391@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="이름" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="이메일" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="제목" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="메시지" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary hover-lift">메시지 보내기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-rocket"></i>
+                        <span>Kalpha</span>
+                    </div>
+                    <p>미래를 향한 혁신이 시작되는 곳</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>서비스</h4>
+                    <ul>
+                        <li><a href="#">기능 소개</a></li>
+                        <li><a href="#">요금제</a></li>
+                        <li><a href="#">API 문서</a></li>
+                        <li><a href="#">개발자 도구</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>지원</h4>
+                    <ul>
+                        <li><a href="#">도움말</a></li>
+                        <li><a href="#">커뮤니티</a></li>
+                        <li><a href="#">문의하기</a></li>
+                        <li><a href="#">시스템 상태</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>회사</h4>
+                    <ul>
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">채용 정보</a></li>
+                        <li><a href="#">보도 자료</a></li>
+                        <li><a href="#">파트너십</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#">개인정보처리방침</a>
+                    <a href="#">서비스 이용약관</a>
+                    <a href="#">쿠키 정책</a>
+                </div>
+                <p>&copy; 2025 Kalpha. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="modal">
+        <div class="modal-content demo-content">
+            <div class="modal-header">
+                <h3>데모 영상</h3>
+                <button class="close-btn" onclick="closeModal('demoModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="demo-video">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <p>데모 영상 준비 중...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
